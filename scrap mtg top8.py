@@ -41,7 +41,7 @@ def deck(commander):
                 
             if compteur==1:
                 
-                print("https://mtgtop8.com/{}".format(link.get("href")))
+                retrun "https://mtgtop8.com/{}".format(link.get("href"))
 
             compteur=1
 
@@ -63,11 +63,11 @@ def tournoi():
 
         if compteur==94:
             
-            return("Le dernier gros tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href")))
+            return "Le dernier gros tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href"))
         
         if compteur==104:
 
-            return("Le dernier tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href")))
+            return "Le dernier tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href")) 
             break        
 
         compteur=compteur+1
