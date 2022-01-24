@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 
-def deck():
+def deck(commander):
     commander="The Gitrog Monster"
 
     url="https://mtgtop8.com/format?f=EDH"
