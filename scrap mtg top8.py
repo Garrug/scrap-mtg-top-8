@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 
 
 
-
-def deck(commander):
+def deck():
     commander="The Gitrog Monster"
 
     url="https://mtgtop8.com/format?f=EDH"
@@ -15,7 +14,6 @@ def deck(commander):
     soup = BeautifulSoup(html_content, "lxml")
     #print(soup.prettify())
 
-    compteur=0
 
     for link in soup.find_all("a"):
     #    inner_text="{}".format(link.text)
@@ -41,7 +39,7 @@ def deck(commander):
                 
             if compteur==1:
                 
-                retrun "https://mtgtop8.com/{}".format(link.get("href"))
+                print("https://mtgtop8.com/{}".format(link.get("href")))
 
             compteur=1
 
@@ -56,18 +54,10 @@ def tournoi():
     soup = BeautifulSoup(html_content, "lxml")
     #print(soup.prettify())
 
-    compteur=0
 
     for link in soup.find_all("a"):
     #    inner_text="{}".format(link.text)
 
-        if compteur==94:
+        if "event" in "{}".format(link.get("href")):
             
-            return "Le dernier gros tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href"))
-        
-        if compteur==104:
-
-            return "Le dernier tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href")) 
-            break        
-
-        compteur=compteur+1
+            return("Le dernier gros tournoi :\nhttps://mtgtop8.com/{}".format(link.get("href")))
