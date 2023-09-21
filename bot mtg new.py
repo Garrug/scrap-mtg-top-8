@@ -97,4 +97,4 @@ async def tournoi(ctx):
   
         
 
-bot.run("OTM1MjIzMDYzMzI1MzQzNzk1.Ye7gWQ.6QzaOT3SZGh3n2tUkVv5lxggVfw")
+bot.run("token")
